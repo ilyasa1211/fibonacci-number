@@ -1,8 +1,7 @@
-var Fibonaci = /** @class */ (function () {
-    function Fibonaci() {
-    }
+"use strict";
+class Fibonaci {
     // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233
-    Fibonaci.prototype.getNumber = function (index) {
+    getNumber(index) {
         if (index == 0) {
             return 0;
         }
@@ -10,9 +9,8 @@ var Fibonaci = /** @class */ (function () {
             return 1;
         }
         return this.getNumber(index - 1) + this.getNumber(index - 2);
-    };
-    return Fibonaci;
-}());
-var fib = new Fibonaci();
-var result = fib.getNumber(13);
+    }
+}
+const fib = new Fibonaci();
+const result = fib.getNumber(13);
 console.log(result);
